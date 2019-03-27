@@ -7,4 +7,4 @@ const construction = config-panel-construction;
 const tipping = config-panel-tipping;
 
 
-const configuredTie = [name,]
+const configuredTie = [name,materials,pattern,width,length,construction,tipping]
