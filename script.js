@@ -9,13 +9,17 @@
 // display new tie
 
 
-const name = config-panel-name;
-const materials= config-panel-materials;
-const pattern= config-panel-pattern;
-const width = config-panel-width;
-const length = config-panel-length;
-const construction = config-panel-construction;
-const tipping = config-panel-tipping;
+const name = document.querySelector('.config-panel-name_input').value;
+const materials= document.querySelector('config-panel-materials').value;
+const pattern= document.querySelector('config-panel-pattern').value;
+const width = document.querySelector('config-panel-width').value;
+const length = document.querySelector('config-panel-length').value;
+const construction = document.querySelector('config-panel-construction').value;
+const tipping = document.querySelector('config-panel-tipping').value;
 
 
 const configuredTie = [name,materials,pattern,width,length,construction,tipping]
+
+console.log(name);
+
+//document.querySelector(config-panel-name_input);
