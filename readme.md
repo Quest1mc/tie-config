@@ -1,6 +1,6 @@
 build a  custom tie configurstor site 
 
-allow the user to select from material , colour , pattern, length width construction and a
+allow the user to select from material , colour , pattern, length width construction and tipping 
 
 
 fixed options 
