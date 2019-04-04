@@ -43,21 +43,21 @@
             <input type="text" class="config-panel-name_input" id="config-panel-name_input" value="ruff">
             </div>
         <div class="config-panel-materials">
-            <p> Select your material </p>
-            Silk<input type="radio" name="material" id="silk" value="silk"> 
-            Microfiber<input type="radio" name="material" id="microfiber" value="microfiber">
-            Linen<input type="radio" name="material" id="linen" value="linen"> 
-            Cotton<input type="radio" name="material" id="cotton" value="cotton">
-            Wool<input type="radio" name="material" id="wool"value="wool">
-            Cashmere<input type="radio" name="material" id="cashmere" value="cashmere">
-            Tweed<input type="radio" name="tweed" id="tweed" value="tweed">
-            Polyester<input type="radio" name="material" id="Polyester" value="Polyester">
-            Bamboo<input type="radio" name="material" id="bamboo" value="bamboo">
+            <h3> Select your material </h3>
+            Silk<input type="radio" name="material" onchange="getValues()" id="silk" value="silk"> 
+            Microfiber<input type="radio" name="material" onchange="getValues()" id="microfiber" value="microfiber">
+            Linen<input type="radio" name="material" onchange="getValues()" id="linen" value="linen"> 
+            Cotton<input type="radio" name="material" onchange="getValues()" id="cotton" value="cotton">
+            Wool<input type="radio" name="material" onchange="getValues()" id="wool"value="wool">
+            Cashmere<input type="radio" name="material" onchange="getValues()" id="cashmere" value="cashmere">
+            Tweed<input type="radio" name="tweed" onchange="getValues()" id="tweed" value="tweed">
+            Polyester<input type="radio" name="material" onchange="getValues()" id="Polyester" value="Polyester">
+            Bamboo<input type="radio" name="material" onchange="getValues()" id="bamboo" value="bamboo">
 
         </div>
         <div class="config-panel-pattern">
-            <p> Select your pattern </p>
-            Solid<input type="radio" name="pattern"  class="pattern" id="solid" value="solid">
+            <h3> Select your pattern </h3>
+            Solid<input type="radio" name="pattern" onchange="getValues()" class="pattern" id="solid" value="solid">
             Striped<input type="radio" name="pattern"  class="pattern" id="striped" value="striped">
             Foulard<input type="radio" name="pattern"  class="pattern" id="foulard" value="foulard"> Foulard
             Plaid<input type="radio" name="pattern"  class="pattern" id="plaid" value="plaid">
@@ -68,7 +68,7 @@
            
         </div>
         <div class="config-panel-width">
-            <p> Select your width  </p>
+            <h3> Select your width  </h3>
             2-inch<input type="radio" name="width" id="2-inch" value="2-inch">
             2.5-inch<input type="radio" name="width" id="2.5-inch" value="2.5-inch">
             3-inch<input type="radio" name="width" id="3-inch" value="3-inch">
@@ -77,23 +77,25 @@
 
         </div>
         <div class="config-panel-length">
-            <p> Select your Tie length  </p>
+            <h3> Select your Tie length  </h3>
             48-inch<input type="radio" name="length" id="48-inch" value="48-inch">
             58-inch<input type="radio" name="length" id="58-inch" value="58-inch">
             63-inch<input type="radio" name="length" id="63-inch" value="63-inch"> 
         </div>
         <div class="config-panel-construction">
-            <p> Select your construction  </p>
+            <h3> Select your construction  </h3>
             Four-in-hand<input type="radio" name="construction" id="four-in-hand" value="four-in-hand">
             Seven-Fold<input type="radio" name="construction" id="Seven-Fold" value="Seven-Fold">
             Six-Fold<input type="radio" name="construction" id="Six-Fold" value="Six-Fold"> 
         </div>
         <div class="config-panel-tipping">
-            <p> Select your Tie tipping goes here </p>
+            <h3> Select your Tie tipping goes here </h3>
             un-tipped<input type="radio" name="tipping" id="un-tipped" value="un-tipped">
             self-tipped<input type="radio" name="tipping" id="self-tipped" value="self-tipped">self-tipped
             Decorative-tipping<input type="radio" name="tipping" id="Decorative-tipping" value="Decorative-tipping">
         </div>
+        <button onclick="getValues()" class="submit">submit</button>
+
         <div class="finished-Tie">
             <h3>Your Tie</h3>
             <p> You have selelcted a Silk Foulard four in hand of  3.25 inch width with a length of 58 inches self tipped tie  </p>
