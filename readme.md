@@ -28,6 +28,6 @@ UI design  white background with light grey panels and toggles for next sections
  navigation 
 
 
-
+investigate how to show all options but only one is selectable. Radio buttons?
 
 
