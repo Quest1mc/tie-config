@@ -28,6 +28,7 @@ UI design  white background with light grey panels and toggles for next sections
  navigation 
 
 
-investigate how to show all options but only one is selectable. Radio buttons?
+investigate how to show all options but only one is selectable. Radio buttons? fixed 
+//challenge : at this stage I am getting undefined when I run onchange to console log my chosen value. ask danny ?
 
 
