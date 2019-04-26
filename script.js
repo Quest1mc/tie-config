@@ -44,25 +44,34 @@ class Tie {
 
 // to do write a function that rechecks the page values once submit has been pressed 
 // this function creates an object from all the values present in the DOM
+//write into the function so that the null does not appear when the value is empty
 
 
 // below is the problem of cannot read value of null for all below names...think about this 
 function getValues(){
     //const name = document.querySelector('.config-panel-name_input').value;
     const material = document.querySelector('input[name="material"]:checked').value;
-   
-
-   // document.querySelector('#material').value;
-    const material2 = document.getElementsByName('material').length;
-    // const pattern= document.querySelector('#pattern').value;
-    // const width = document.querySelector('#width').value;
-    // const length = document.querySelector('#length').value;
-    // const construction = document.querySelector('#construction').value;
-    // const tipping = document.querySelector('#tipping').value;
-    // const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
-    //alert($('input[type="radio"]:checked').val());
     console.log(material);
-    console.log(material2);
+    const pattern = document.querySelector('input[name="pattern"]:checked').value;
+    console.log(pattern);    
+    const width = document.querySelector('input[name="width"]:checked').value;
+    console.log(width);
+    const length = document.querySelector('input[name="length"]:checked').value;
+    console.log(length);
+
+    const construction = document.querySelector('input[name="construction"]:checked').value;
+    console.log(construction);
+
+    const tipping = document.querySelector('input[name="tipping"]:checked').value;
+    console.log(tipping);
+
+ 
+
+    
+    //const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
+    //alert($('input[type="radio"]:checked').val());
+   // console.log(configuredTie);
+    
    
 }
 
