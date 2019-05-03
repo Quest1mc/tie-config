@@ -35,7 +35,6 @@ class Tie {
       this.length = length;
       this.construction = construction;
       this.tipping = tipping;
-
     }
   }
 //let favouriteTie = new Tie('favourite','silk','foulard','3.25-inch', '58-inch', 'seven-fold','self-tipped')
@@ -48,54 +47,30 @@ class Tie {
 
 
 // below is the problem of cannot read value of null for all below names...think about this 
+tempTie = {}
 function getValues(){
-    const name = document.querySelector('.config-panel-name_input').value;
-    if(name) name= name.value;
+    var name = document.querySelector('.config-panel-name_input')
+    if(name) tempTie.name= name.value;
     var material = document.querySelector('input[name="material"]:checked')
-    if(material) material= material.value;
-    console.log(material);
+    if(material) tempTie.material= material.value;
     var pattern = document.querySelector('input[name="pattern"]:checked')
-    if(pattern) pattern= pattern.value;
-    console.log(pattern);    
+    if(pattern) tempTie.pattern= pattern.value;
     var width = document.querySelector('input[name="width"]:checked')
-    if(width) width= width.value;
-    console.log(width);
+    if(width) tempTie.width= width.value;
     var length = document.querySelector('input[name="length"]:checked')
-    if(length) length= length.value;
-    console.log(length);
-
+    if(length) tempTie.length= length.value;
     var construction = document.querySelector('input[name="construction"]:checked')
-    if(length) length= length.value;
-    console.log(construction);
-
+    if(construction) tempTie.construction= construction.value;
     var tipping = document.querySelector('input[name="tipping"]:checked')
-    if(tipping) tipping= tipping.value;
-    console.log(tipping);
-
-  
-    //alert($('input[type="radio"]:checked').val());
-   // console.log(configuredTie);
-    
-   
+    if(tipping) tempTie.tipping= tipping.value;
+    console.log(tempTie);
 }
 function configuredTie(){
   const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
   console.log(configuredTie)
 }
 
-
-
-
-// const currentTie = {}
-
-
-
-
-
-
-
 //const configuredTie = [name,materials,pattern,width,length,construction,tipping]
 
-console.log(name);
 
 //document.querySelector(config-panel-name_input);
