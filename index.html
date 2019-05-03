@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    
     <title>Tie Configurator</title>
 </head>
-
 <body>
     <header>
         <row>
@@ -18,10 +16,10 @@
                         new tie
                     </li>
                     <li>
-                        My ties
+                        My ties  
                     </li>
                     <li>
-                        About
+                        About 
                     </li>
                 </ul>
                 <ul class="myties">
@@ -30,95 +28,84 @@
             </nav>
 
         </row>
-
+        
     </header>
-    <div class="config-container">
+    <div class= "config-container">
         <div class="title">
             <h1>Tie Configurator</h1>
         </div>
 
         <section>
-
+            
         </section>
         <div class="config-panel-name">
             <p>Name goes here </p>
-            <input type="text" class="config-panel-name_input" id="config-panel-name_input" placeholder="Name your Tie">
-        </div>
-        <div class="config-panel-materials">
+            <input onchange="getValues()" name ="name"type="text" class="config-panel-name_input" id="config-panel-name_input" placeholder="ruff">
+            </div>
+        <div class="config-panel-materials" onchange="getValues()">
             <h3> Select your material </h3>
-            <input type="radio" name="material" onchange="getValues()" id="silk" value="silk"> Silk
-            <input type="radio" name="material" onchange="getValues()" id="microfiber" value="microfiber">Microfiber
-            <input type="radio" name="material" onchange="getValues()" id="linen" value="linen">Linen
-            <input type="radio" name="material" onchange="getValues()" id="cotton" value="cotton">Cotton
-            <input type="radio" name="material" onchange="getValues()" id="wool" value="wool">Wool
-            <input type="radio" name="material" onchange="getValues()" id="cashmere" value="cashmere">Cashmere
-            <input type="radio" name="material" onchange="getValues()" id="tweed" value="tweed">Tweed
-            <input type="radio" name="material" onchange="getValues()" id="Polyester" value="Polyester">Polyester
-            <input type="radio" name="material" onchange="getValues()" id="bamboo" value="bamboo">Bamboo
+            Silk<input type="radio" name="material" id="silk" value="silk"> 
+            Microfiber<input type="radio" name="material" id="microfiber" value="microfiber">
+            Linen<input type="radio" name="material" id="linen" value="linen"> 
+            Cotton<input type="radio" name="material" id="cotton" value="cotton">
+            Wool<input type="radio" name="material" id="wool"value="wool">
+            Cashmere<input type="radio" name="material" id="cashmere" value="cashmere">
+            Tweed<input type="radio" name="material" id="tweed" value="tweed">
+            Polyester<input type="radio" name="material" id="Polyester" value="Polyester">
+            Bamboo<input type="radio" name="material" id="bamboo" value="bamboo">
 
         </div>
-        <div class="config-panel-pattern">
+        <div class="config-panel-pattern" onchange="getValues()">
             <h3> Select your pattern </h3>
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="solid" value="solid">Solid
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="striped"
-                value="striped">Striped
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="foulard" value="foulard">
-            Foulard
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="plaid" value="plaid">Plaid
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="pin-dot" value="pin-dot"> Pin
-            Dot
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="polka-dot"
-                value="polka-dot">Polka Dot
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="paisely" value="paisely">
-            Paisely
-            <input type="radio" name="pattern" onchange="getValues()" class="pattern" id="animal-print"
-                value="animal-print"> Animal Print
+            Solid<input type="radio" name="pattern" class="pattern" id="solid" value="solid">
+            Striped<input type="radio" name="pattern"  class="pattern" id="striped" value="striped">
+            Foulard<input type="radio" name="pattern"  class="pattern" id="foulard" value="foulard"> Foulard
+            Plaid<input type="radio" name="pattern"  class="pattern" id="plaid" value="plaid">
+            Pin Dot<input type="radio" name="pattern"  class="pattern" id="pin-dot"value="pin-dot">
+            Polka Dot<input type="radio" name="pattern"  class="pattern" id="polka-dot" value="polka-dot">
+            Paisely<input type="radio" name="pattern"  class="pattern" id="paisely" value="paisely">
+            Animal Print<input type="radio" name="pattern"  class="pattern" id="animal-print" value="animal-print">
+           
+        </div>
+        <div class="config-panel-width" onchange="getValues()">
+            <h3> Select your width  </h3>
+            2-inch<input type="radio" name="width" id="2-inch" value="2-inch">
+            2.5-inch<input type="radio" name="width" id="2.5-inch" value="2.5-inch">
+            3-inch<input type="radio" name="width" id="3-inch" value="3-inch">
+            3.25-inch<input type="radio" name="width" id="3.25-inch" value="3.25-inch">
+            3.75-inch<input type="radio" name="width" id="3.75-inch" value="3.75-inch">
 
         </div>
-        <div class="config-panel-width">
-            <h3> Select your width </h3>
-            <input type="radio" name="width" onchange="getValues()" id="2-inch" value="2-inch">2 inch
-            <input type="radio" name="width" onchange="getValues()" id="2.5-inch" value="2.5-inch">2.5 inch
-            <input type="radio" name="width" onchange="getValues()" id="3-inch" value="3-inch">3 inch
-            <input type="radio" name="width" onchange="getValues()" id="3.25-inch" value="3.25-inch">3.25 inch
-            <input type="radio" name="width" onchange="getValues()" id="3.75-inch" value="3.75-inch">3.75inch
-
+        <div class="config-panel-length" onchange="getValues()">
+            <h3> Select your Tie length  </h3>
+            48-inch<input type="radio" name="length" id="48-inch" value="48-inch">
+            58-inch<input type="radio" name="length" id="58-inch" value="58-inch">
+            63-inch<input type="radio" name="length" id="63-inch" value="63-inch"> 
         </div>
-        <div class="config-panel-length">
-            <h3> Select your Tie length </h3>
-            <input type="radio" name="length" onchange="getValues()" id="48-inch" value="48-inch">48-inch
-            <input type="radio" name="length" onchange="getValues()" id="58-inch" value="58-inch">58-inch
-            <input type="radio" name="length" onchange="getValues()" id="63-inch" value="63-inch"> 63-inch
+        <div class="config-panel-construction" onchange="getValues()">
+            <h3> Select your construction  </h3>
+            Four-in-hand<input type="radio" name="construction" id="four-in-hand" value="four-in-hand">
+            Seven-Fold<input type="radio" name="construction" id="Seven-Fold" value="Seven-Fold">
+            Six-Fold<input type="radio" name="construction" id="Six-Fold" value="Six-Fold"> 
         </div>
-        <div class="config-panel-construction">
-            <h3> Select your construction </h3>
-            <input type="radio" name="construction" onchange="getValues()" id="four-in-hand"
-                value="four-in-hand">Four-in-hand
-            <input type="radio" name="construction" onchange="getValues()" id="Seven-Fold" value="Seven-Fold">Seven-Fold
-            <input type="radio" name="construction" onchange="getValues()" id="Six-Fold" value="Six-Fold"> Six-Fold
-        </div>
-        <div class="config-panel-tipping">
+        <div class="config-panel-tipping" onchange="getValues()">
             <h3> Select your Tie tipping goes here </h3>
-            un-tipped<input type="radio" name="tipping" onchange="getValues()" id="un-tipped" value="un-tipped">
-            self-tipped<input type="radio" name="tipping" onchange="getValues()" id="self-tipped"
-                value="self-tipped">self-tipped
-            Decorative-tipping<input type="radio" name="tipping" onchange="getValues()" id="Decorative-tipping"
-                value="Decorative-tipping">
+            un-tipped<input type="radio" name="tipping" id="un-tipped" value="un-tipped">
+            self-tipped<input type="radio" name="tipping" id="self-tipped" value="self-tipped">self-tipped
+            Decorative-tipping<input type="radio" name="tipping" id="Decorative-tipping" value="Decorative-tipping">
         </div>
-        <button onclick="configuredTie()" class="submit">submit</button>
+        <button onclick="submitTie()" class="submit">submit</button>
 
         <div class="finished-Tie">
             <h3>Your Tie</h3>
-            <p> your new tie is ...
-                </p>
-        </div>
+            <p> You have selelcted a Silk Foulard four in hand of  3.25 inch width with a length of 58 inches self tipped tie  </p>
+        </div> 
 
-    </div>
+        </div>
 
 
 
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -27,14 +27,14 @@
 //save each tie as a disticnt object
 
 class Tie {
-    constructor(name,material,pattern, width,length,construction,tipping) {
-      this.name = name;
-      this.material = material;
-      this.pattern = pattern;
-      this.width = width;
-      this.length = length;
-      this.construction = construction;
-      this.tipping = tipping;
+    constructor(tie) {
+      this.name = tie.name;
+      this.material = tie.material;
+      this.pattern = tie.pattern;
+      this.width = tie.width;
+      this.length = tie.length;
+      this.construction = tie.construction;
+      this.tipping = tie.tipping;
     }
   }
 //let favouriteTie = new Tie('favourite','silk','foulard','3.25-inch', '58-inch', 'seven-fold','self-tipped')
@@ -46,31 +46,16 @@ class Tie {
 //write into the function so that the null does not appear when the value is empty
 
 
-// below is the problem of cannot read value of null for all below names...think about this 
 tempTie = {}
 function getValues(){
-    var name = document.querySelector('.config-panel-name_input')
-    if(name) tempTie.name= name.value;
-    var material = document.querySelector('input[name="material"]:checked')
-    if(material) tempTie.material= material.value;
-    var pattern = document.querySelector('input[name="pattern"]:checked')
-    if(pattern) tempTie.pattern= pattern.value;
-    var width = document.querySelector('input[name="width"]:checked')
-    if(width) tempTie.width= width.value;
-    var length = document.querySelector('input[name="length"]:checked')
-    if(length) tempTie.length= length.value;
-    var construction = document.querySelector('input[name="construction"]:checked')
-    if(construction) tempTie.construction= construction.value;
-    var tipping = document.querySelector('input[name="tipping"]:checked')
-    if(tipping) tempTie.tipping= tipping.value;
+  inputName = event.target.name
+  inputValue = event.target.value
+  tempTie[inputName] = inputValue
     console.log(tempTie);
-}
-function configuredTie(){
-  const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
+  }
+function submitTie(){
+  const configuredTie = new Tie(tempTie);
+  console.log(tempTie)
   console.log(configuredTie)
 }
 
-//const configuredTie = [name,materials,pattern,width,length,construction,tipping]
-
-
-//document.querySelector(config-panel-name_input);
