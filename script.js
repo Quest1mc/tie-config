@@ -49,32 +49,39 @@ class Tie {
 
 // below is the problem of cannot read value of null for all below names...think about this 
 function getValues(){
-    //const name = document.querySelector('.config-panel-name_input').value;
-    const material = document.querySelector('input[name="material"]:checked').value;
+    const name = document.querySelector('.config-panel-name_input').value;
+    if(name) name= name.value;
+    var material = document.querySelector('input[name="material"]:checked')
+    if(material) material= material.value;
     console.log(material);
-    const pattern = document.querySelector('input[name="pattern"]:checked').value;
+    var pattern = document.querySelector('input[name="pattern"]:checked')
+    if(pattern) pattern= pattern.value;
     console.log(pattern);    
-    const width = document.querySelector('input[name="width"]:checked').value;
+    var width = document.querySelector('input[name="width"]:checked')
+    if(width) width= width.value;
     console.log(width);
-    const length = document.querySelector('input[name="length"]:checked').value;
+    var length = document.querySelector('input[name="length"]:checked')
+    if(length) length= length.value;
     console.log(length);
 
-    const construction = document.querySelector('input[name="construction"]:checked').value;
+    var construction = document.querySelector('input[name="construction"]:checked')
+    if(length) length= length.value;
     console.log(construction);
 
-    const tipping = document.querySelector('input[name="tipping"]:checked').value;
+    var tipping = document.querySelector('input[name="tipping"]:checked')
+    if(tipping) tipping= tipping.value;
     console.log(tipping);
 
- 
-
-    
-    //const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
+  
     //alert($('input[type="radio"]:checked').val());
    // console.log(configuredTie);
     
    
 }
-
+function configuredTie(){
+  const configuredTie = new Tie(name,material,pattern, width,length,construction,tipping);
+  console.log(configuredTie)
+}
 
 
 
