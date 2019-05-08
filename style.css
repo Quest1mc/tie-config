@@ -1,0 +1,120 @@
+body{
+    position: relative;
+    background-color: #7B7B7B
+}
+li{
+    display: inline-block;
+    padding-right: 50px;
+}
+ul{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.config-container{
+    padding-left: 150px;
+    text-align: center;
+}
+h1{
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 76px;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+h3{
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 76px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.row{
+    width: 100%;
+}
+
+.config-container_header{
+    /* position: absolute; */
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    padding-bottom: 50px;
+    /* left: 347px;
+    top: 248px; */
+    
+    font-family: 'Saira', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 113px;
+    
+    color: #000000;
+}
+.hexagon,
+.hexagon-small{
+    display: inline-block;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 49% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 49% 100%, 0% 75%, 0% 25%);
+    background: #222020;
+}
+
+.hexagon{
+    
+    /* position: absolute; */
+    width: 225px;
+    height: 225px;
+    left: 200px;
+    top: 500px;
+    /* z-index: -5; */
+    
+}
+
+.hexagon-small{
+   
+    /* position: absolute; */
+    width: 175px;
+    height: 175px;
+    left: 200px;
+    top: 500px;
+    transform: translate(-50px ,50px);
+
+    
+    /* z-index: 10; */
+    
+}
+/* .border-style-thin {
+    background-color: #7ED9ED;
+    z-index: 11
+  }
+  .border-style-thin:after {	
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+     z-index: 12; 
+  }
+  .clip-each:after {
+    content: "";
+    position: absolute;
+    background: #000;
+  } */
+.config-panel__input{
+    display: none;
+}
+.config-panel__input-active{
+    -webkit-clip-path: inset(5% 20% 15% 10%);
+    clip-path: inset(5% 20% 15% 10%);
+    background-color: white;
+    width: 764px;
+    height: 760px;
+    left: 294px;
+    top: 441px;
+    z-index: 120;
+}
