@@ -21,9 +21,6 @@
 
 //consider making an object instead
 
-
-
-
 //save each tie as a disticnt object
 
 class Tie {
@@ -44,18 +41,43 @@ class Tie {
 // to do write a function that rechecks the page values once submit has been pressed 
 // this function creates an object from all the values present in the DOM
 //write into the function so that the null does not appear when the value is empty
+// function getValues(){
+//   inputName = event.target.name
+//   inputValue = event.target.value
+//   tempTie[inputName] = inputValue
+//     // console.log(tempTie);
+// }
 
 
 tempTie = {}
+tieArray = []
+
 function getValues(){
-  inputName = event.target.name
-  inputValue = event.target.value
-  tempTie[inputName] = inputValue
-    console.log(tempTie);
+  inputs = document.querySelectorAll('input:checked')
+  for(each of inputs){
+    tempTie[each.name] = each.value
   }
-function submitTie(){
-  const configuredTie = new Tie(tempTie);
-  console.log(tempTie)
-  console.log(configuredTie)
+  tempTie.name = document.querySelectorAll('input[name="name"')[0].value
+  newDiv = ''
+  for(prop in tempTie){
+    newDiv += prop+': '+ tempTie[prop]+ ' <br>'
+ }
+ document.querySelector('.finished-Tie').innerHTML = '<h3><b>Your tie</b></h3><p>You have selected: <br>'+newDiv+'</p>'
 }
 
+getValues()
+
+function submitTie(){
+  const configuredTie = new Tie(tempTie);
+  tieArray.push(configuredTie)
+}
+//  svgObject = document.getElementById('svg-object')
+//  console.log(svgObject);
+//  console.log(svgObject.contentDocument);
+ window.addEventListener("load", function() {
+  var svgObject = document.getElementById('svg-object').contentDocument;
+  console.log(svgObject);
+  var svg = svgObject.getElementById('svg-tie');
+  console.log(svg.children[1].firstChild.firstChild.firstChild.fill);
+  svg.style.fill ='red'
+});
