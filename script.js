@@ -32,6 +32,7 @@ class Tie {
       this.length = tie.length;
       this.construction = tie.construction;
       this.tipping = tie.tipping;
+      this.color = tie.color;
     }
   }
 //let favouriteTie = new Tie('favourite','silk','foulard','3.25-inch', '58-inch', 'seven-fold','self-tipped')
@@ -57,7 +58,8 @@ function getValues(){
   for(each of inputs){
     tempTie[each.name] = each.value
   }
-  tempTie.name = document.querySelectorAll('input[name="name"')[0].value
+  tempTie.color = document.querySelector('input[type="color"]').value
+  tempTie.name = document.querySelector('input[name="name"]').value
   newDiv = ''
   for(prop in tempTie){
     newDiv += prop+': '+ tempTie[prop]+ ' <br>'
@@ -71,13 +73,10 @@ function submitTie(){
   const configuredTie = new Tie(tempTie);
   tieArray.push(configuredTie)
 }
-//  svgObject = document.getElementById('svg-object')
-//  console.log(svgObject);
-//  console.log(svgObject.contentDocument);
+
+
  window.addEventListener("load", function() {
   var svgObject = document.getElementById('svg-object').contentDocument;
-  console.log(svgObject);
   var svg = svgObject.getElementById('svg-tie');
-  console.log(svg.children[1].firstChild.firstChild.firstChild.fill);
-  svg.style.fill ='red'
-});
+  svg.children[1].firstChild.firstChild.firstChild.setAttribute('fill','red' )
+ })
